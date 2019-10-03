@@ -1,0 +1,110 @@
+/*	Theme Name: CAEI Theme
+	Theme URI: https://wordpress.org/themes/twentysixteen/
+	Author: CA Irag
+	Author URI: https://wordpress.org/
+	Description: Basic theme for proffesional websites.
+	Version: 1.0.0
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Tags: one-column, two-columns, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, blog
+    Text Domain: caeithemethree
+    Wordpress Version:  5.2.1
+
+	This theme, like WordPress, is licensed under the GPL.
+    Use it to make something cool, have fun, and share what you've learned with others. */
+    
+/*** CAEI STYLES ***/
+/* HTML tag overides */
+body { margin: 0; }
+body * { box-sizing: border-box; }
+h1, h2, h3, h4, h5, h6, p, ul, ol, hr { margin: 0; }
+a { text-decoration: none; }
+button { border-radius: 4px; padding: .5em 1em; cursor: pointer; }
+
+/* Global Typhography */
+body { font-family: 'PT Sans'; }
+
+/* Basic Elements */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1em; }
+
+/* Header */
+#caei-header {
+    border-bottom: 1px solid #eee;
+    header {
+        .header_top { padding: 1em 0; }
+        .header_brand {
+            a {
+                font-size: 20px;
+                font-weight: 700;
+                color: #000;
+            }
+        }
+    }
+}
+
+/* Footer */
+#caei-footer {
+    border-top: 1px solid #eee;
+    footer {
+        .footer_bottom { padding: 1em 0; font-size: 14px; }
+    }
+}
+
+/* Content Area */
+.content-area {
+    padding: 1em 0;
+}
+
+/* Post Article */
+article.post {
+    margin: 1em 0;
+    .entry-header { margin-bottom: .5em; }
+    .entry-footer {
+        margin-top: .5em;
+        border-top: 1px solid #eee;
+        font-size: 14px;
+        color: #777;
+        .author { font-weight: 700; text-transform: capitalize; }
+    }
+}
+
+/* Page Article */
+article.page {
+    margin: 1em 0;
+    .entry-header { margin-bottom: .5em; }
+    .entry-footer {
+        margin-top: .5em;
+        border-top: 1px solid #eee;
+        font-size: 14px;
+        color: #777;
+        .author { font-weight: 700; text-transform: capitalize; }
+    }
+}
+
+/* Home or Blog */
+#caei-template-home {
+    .archive-navigation { font-size: 14px; }
+}
+
+/* Search */
+#caei-template-search {
+    .search-query {
+        font-size: 14px;
+        span { font-weight: 700; }
+    }
+}
+
+/* Archive */
+#caei-template-archive {
+    .archive-title {
+        font-size: 14px;
+        span { font-weight: 700; }
+    }
+}
+
+/* 404 */
+#caei-template-404 {
+    .title { margin-bottom: .5em; }
+    .message { font-size: 14px; }
+    .action { margin-top: 1em; }
+}
