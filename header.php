@@ -7,9 +7,9 @@
 </head>
 <body <?php body_class(); ?> >
     <section id="caei-header">
-        <header>
-            <div class="container">
-                <div class="header_top">
+        <header>            
+            <div class="header_top">
+                <div class="container">
                     <div class="header_brand">
                         <a id="header_brand_link" href="<?php echo get_home_url(); ?>">
                             <?php bloginfo('name'); ?>
@@ -23,7 +23,11 @@
                         ?>
                     </div>
                 </div>
-                <div class="header_bottom"></div>
+            </div>
+            <div class="header_bottom">
+                <div class="container">
+                    <?php dynamic_sidebar( 'header-bottom-widget-area' ); ?>                
+                </div>
             </div>
         </header>
     </section>

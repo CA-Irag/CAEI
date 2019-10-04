@@ -49,10 +49,8 @@ body {
 }
 
 /* Header */
-#caei-header {
-  border-bottom: 1px solid #eee;
-}
 #caei-header header .header_top {
+  border-bottom: 1px solid #eee;
   padding: 1em 0;
 }
 #caei-header header .header_brand a {
@@ -62,10 +60,8 @@ body {
 }
 
 /* Footer */
-#caei-footer {
-  border-top: 1px solid #eee;
-}
 #caei-footer footer .footer_bottom {
+  border-top: 1px solid #eee;
   padding: 1em 0;
   font-size: 14px;
 }

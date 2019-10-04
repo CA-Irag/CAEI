@@ -9,18 +9,25 @@
                     <div class="archive-navigation">
                         <div class="categories">
                             Categories: 
-                            <?php wp_list_categories(
-                                array(
-                                    'use_desc_for_title' => 0,
-                                    'style' => '',
-                                    'separator' => ' '
-                                )
-                            ); ?>
+                            <?php
+                                $cat = wp_list_categories(
+                                    array(
+                                        'use_desc_for_title' => 0,
+                                        'style' => '',
+                                        'separator' => ', ',
+                                        'exclude' => 1,
+                                        'echo' => 0
+                                    )
+                                );
+                                echo substr($cat, 0, -3);
+                            ?>
                         </div>
-                        <div class="tags">
-                            Tags: 
-                            <?php the_tags('', ' ', null); ?>
-                        </div>                      
+                        <?php if ( get_the_tags() ) { ?>
+                            <div class="tags">
+                                Tags: 
+                                <?php the_tags('', ', ', null); ?>
+                            </div>
+                        <?php } ?>
                     </div>
                     <?php
                     while ( have_posts() ) {

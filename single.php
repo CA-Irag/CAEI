@@ -13,6 +13,7 @@
                     echo 'No posts available.';
                 }
                 ?>
+                <?php dynamic_sidebar( 'single-post-below-content-area' ); ?>
             </div>
 		</main>
 	</section>
