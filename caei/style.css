@@ -169,6 +169,12 @@ article.post .entry-thumbnail img {
   object-fit: cover;
   object-position: center center;
 }
+article.post .entry-content code {
+  padding: 0.4em 0.5em;
+  background: #222;
+  border-radius: 4px;
+  color: greenyellow;
+}
 
 /* Page Article */
 article.page {
