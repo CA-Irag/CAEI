@@ -19,7 +19,7 @@
 				the_title( '<span class="entry-title">', '</span>' );
 			?>
 			<div class="singular-subtitle">
-				<span class="author">By <?php the_author(); ?></span> &mdash; <span class="published"><?php the_date(); ?> <?php the_time(); ?></span>
+				<span class="author">By <?php the_author(); ?></span> &mdash; <span class="published"><?php the_modified_date(); ?> <?php the_modified_time(); ?></span>
 			</div>
 			<?php
 			else :
@@ -42,7 +42,7 @@
 				$excerpt = preg_replace(" ([.*?])",'',$excerpt);
 				$excerpt = strip_shortcodes($excerpt);
 				$excerpt = strip_tags($excerpt);
-				if (strlen($excerpt) > 350) {
+				if (strlen($excerpt) > 230) {
 					$excerpt = substr($excerpt, 0, 230);		
 					$excerpt = $excerpt.'<a href="'.get_the_permalink().'">... more</a>';
 					echo $excerpt;
@@ -54,7 +54,7 @@
 		</div>
 		<?php if ( !is_singular() ) : ?>
 		<footer class="entry-footer">
-			<span class="author">By <?php the_author(); ?></span> &mdash; <span class="published"><?php the_date(); ?> <?php the_time(); ?></span>
+			<span class="author">By <?php the_author(); ?></span> &mdash; <span class="published"><?php the_modified_date(); ?> <?php the_modified_time(); ?></span>
 		</footer>
 		<?php endif; ?>
 	</div>
