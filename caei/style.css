@@ -78,8 +78,8 @@ body {
 #caei-header header .header_top .container .header_brand a {
   line-height: 1;
   font-size: 20px;
+  font-family: "Lobster", cursive;
   color: #fff;
-  font-weight: 700;
   letter-spacing: 0.5px;
 }
 #caei-header header .header_top .container .header_navigation ul.menu {

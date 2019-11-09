@@ -21,6 +21,7 @@ $color_primary: mediumslateblue;
 $color_secondary: #660099;
 $color_border: #eee;
 $color_sub_base: #555;
+$font_fancy_title: 'Lobster', cursive;
 $font_text: 'Quicksand', sans-serif;
 
 /* HTML tag overides */
@@ -58,8 +59,9 @@ body {
                     a {
                         line-height: 1;
                         font-size: 20px;
+                        font-family: $font_fancy_title;
                         color: $color_base_inverted;
-                        font-weight: 700; letter-spacing: 0.5px;
+                        letter-spacing: 0.5px;
                     }
                 }
                 .header_navigation {
