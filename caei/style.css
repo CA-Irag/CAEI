@@ -13,8 +13,15 @@
 	This theme, like WordPress, is licensed under the GPL.
     Use it to make something cool, have fun, and share what you've learned with others. */
 /*** CAEI STYLES ***/
+/* Variables */
 /* HTML tag overides */
+html {
+  min-height: 100vh;
+}
+
 body {
+  min-height: 100vh;
+  position: relative;
   margin: 0;
 }
 
@@ -28,6 +35,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 
 a {
   text-decoration: none;
+  color: mediumslateblue;
 }
 
 button {
@@ -38,55 +46,128 @@ button {
 
 /* Global Typhography */
 body {
-  font-family: "PT Sans";
+  font-family: "Quicksand", sans-serif;
+  color: #23282d;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.7;
 }
 
 /* Basic Elements */
 .container {
-  max-width: 1100px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 0 1em;
 }
 
 /* Header */
-#caei-header header .header_top {
-  border-bottom: 1px solid #eee;
-  padding: 1em 0;
+#caei-header {
+  background-color: mediumslateblue;
 }
-#caei-header header .header_brand a {
+#caei-header header .header_top {
+  padding: 0.5em 0;
+}
+#caei-header header .header_top .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#caei-header header .header_top .container .header_brand {
+  line-height: 1;
+}
+#caei-header header .header_top .container .header_brand a {
+  line-height: 1;
   font-size: 20px;
+  color: #fff;
   font-weight: 700;
-  color: #000;
+  letter-spacing: 0.5px;
+}
+#caei-header header .header_top .container .header_navigation ul.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  font-size: 14px;
+  line-height: 1;
+}
+#caei-header header .header_top .container .header_navigation ul.menu li.menu-item:not(:first-child) {
+  margin-left: 1em;
+}
+#caei-header header .header_top .container .header_navigation ul.menu li a {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 /* Footer */
+#caei-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 #caei-footer footer .footer_bottom {
   border-top: 1px solid #eee;
-  padding: 1em 0;
+  padding: 0.5em 0;
   font-size: 14px;
 }
 
 /* Content Area */
 .content-area {
-  padding: 1em 0;
+  padding: 1em 0 2em;
 }
 
 /* Post Article */
 article.post {
   margin: 1em 0;
+  display: flex;
 }
 article.post .entry-header {
+  line-height: 0;
   margin-bottom: 0.5em;
+}
+article.post .entry-header .entry-title {
+  line-height: 1;
+  font-size: 36px;
+  font-weight: 700;
+  color: #23282d;
+}
+article.post .entry-header .entry-title a {
+  color: #23282d;
+}
+article.post .entry-header .singular-subtitle {
+  margin-top: 0.25em;
+  color: #555;
+  line-height: 1.7;
+  font-size: 12px;
+}
+article.post .entry-header .singular-subtitle .author {
+  font-weight: 700;
+  text-transform: capitalize;
+  color: mediumslateblue;
+}
+article.post .entry-header .entry-thumbnail-feature img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 1em;
 }
 article.post .entry-footer {
   margin-top: 0.5em;
-  border-top: 1px solid #eee;
-  font-size: 14px;
-  color: #777;
+  font-size: 12px;
+  color: #555;
 }
 article.post .entry-footer .author {
   font-weight: 700;
   text-transform: capitalize;
+  color: mediumslateblue;
+}
+article.post .entry-thumbnail {
+  margin-right: 1em;
+}
+article.post .entry-thumbnail img {
+  width: 270px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center center;
 }
 
 /* Page Article */

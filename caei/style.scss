@@ -14,31 +14,66 @@
     Use it to make something cool, have fun, and share what you've learned with others. */
     
 /*** CAEI STYLES ***/
+/* Variables */
+$color_base: #23282d;
+$color_base_inverted: #fff;
+$color_primary: mediumslateblue;
+$color_border: #eee;
+$color_sub_base: #555;
+$font_text: 'Quicksand', sans-serif;
+
 /* HTML tag overides */
-body { margin: 0; }
-body * { box-sizing: border-box; }
+html { min-height: 100vh }
+body { min-height: 100vh; position: relative; margin: 0; }
+body * {box-sizing: border-box; }
 h1, h2, h3, h4, h5, h6, p, ul, ol, hr { margin: 0; }
-a { text-decoration: none; }
+a { text-decoration: none; color: $color_primary; }
 button { border-radius: 4px; padding: .5em 1em; cursor: pointer; }
 
 /* Global Typhography */
-body { font-family: 'PT Sans'; }
+body {
+    font-family: $font_text;
+    color: $color_base;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7;
+}
 
 /* Basic Elements */
-.container { max-width: 1100px; margin: 0 auto; padding: 0 1em; }
+.container { max-width: 1180px; margin: 0 auto; padding: 0 1em; }
 
 /* Header */
 #caei-header {
+    background-color: $color_primary;
     header {
         .header_top {
-            border-bottom: 1px solid #eee;
-            padding: 1em 0;
-        }
-        .header_brand {
-            a {
-                font-size: 20px;
-                font-weight: 700;
-                color: #000;
+            padding: .5em 0;
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .header_brand {
+                    line-height: 1;
+                    a {
+                        line-height: 1;
+                        font-size: 20px;
+                        color: $color_base_inverted;
+                        font-weight: 700; letter-spacing: 0.5px;
+                    }
+                }
+                .header_navigation {
+                    ul.menu {
+                        list-style: none;
+                        padding: 0;
+                        display: flex;
+                        font-size: 14px;
+                        line-height: 1;
+                        li.menu-item:not(:first-child) {margin-left: 1em; }
+                        li {
+                            a { color: $color_base_inverted; font-weight: 700; letter-spacing: 0.5px; }
+                        }
+                    }
+                }
             }
         }
     }
@@ -46,29 +81,66 @@ body { font-family: 'PT Sans'; }
 
 /* Footer */
 #caei-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     footer {
         .footer_bottom {            
-            border-top: 1px solid #eee;
-            padding: 1em 0; font-size: 14px;
+            border-top: 1px solid $color_border;
+            padding: .5em 0; font-size: 14px;
         }
     }
 }
 
 /* Content Area */
 .content-area {
-    padding: 1em 0;
+    padding: 1em 0 2em;
 }
 
 /* Post Article */
 article.post {
     margin: 1em 0;
-    .entry-header { margin-bottom: .5em; }
+    display: flex;
+    .entry-header {
+        line-height: 0;
+        margin-bottom: .5em;
+        .entry-title {
+            line-height: 1;
+            font-size: 36px;
+            font-weight: 700;
+            color: $color_base;
+            a { color: $color_base; }
+        }
+        .singular-subtitle {
+            margin-top: 0.25em;
+            color: $color_sub_base;
+            line-height: 1.7;
+            font-size: 12px;
+            .author { font-weight: 700; text-transform: capitalize; color: $color_primary; }
+        }
+        .entry-thumbnail-feature {
+            img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                margin-bottom: 1em;
+            }
+        }
+    }
     .entry-footer {
         margin-top: .5em;
-        border-top: 1px solid #eee;
-        font-size: 14px;
-        color: #777;
-        .author { font-weight: 700; text-transform: capitalize; }
+        font-size: 12px;
+        color: $color_sub_base;
+        .author { font-weight: 700; text-transform: capitalize; color: $color_primary; }
+    }
+    .entry-thumbnail {
+        margin-right: 1em;
+        img {
+            width: 270px;
+            height: 180px;
+            object-fit: cover;
+            object-position: center center;
+        }
     }
 }
 
@@ -78,7 +150,7 @@ article.page {
     .entry-header { margin-bottom: .5em; }
     .entry-footer {
         margin-top: .5em;
-        border-top: 1px solid #eee;
+        border-top: 1px solid $color_border;
         font-size: 14px;
         color: #777;
         .author { font-weight: 700; text-transform: capitalize; }
