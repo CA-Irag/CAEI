@@ -20,6 +20,9 @@
 			?>
 			<div class="singular-subtitle">
 				<span class="author">By <?php the_author(); ?></span> &mdash; <span class="published"><?php the_modified_date(); ?> <?php the_modified_time(); ?></span>
+				<?php if ( has_category() ) : ?>
+					<div class="category-badges"><?php the_category(' '); ?></div>
+				<?php endif; ?>
 			</div>
 			<?php
 			else :
@@ -54,6 +57,9 @@
 		</div>
 		<?php if ( !is_singular() ) : ?>
 		<footer class="entry-footer">
+			<?php if ( has_category() ) : ?>
+				<span class="category-badges"><?php the_category(' '); ?>&nbsp;</span>
+			<?php endif; ?>
 			<span class="author">By <?php the_author(); ?></span> &mdash; <span class="published"><?php the_modified_date(); ?> <?php the_modified_time(); ?></span>
 		</footer>
 		<?php endif; ?>

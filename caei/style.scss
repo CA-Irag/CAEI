@@ -18,6 +18,7 @@
 $color_base: #23282d;
 $color_base_inverted: #fff;
 $color_primary: mediumslateblue;
+$color_secondary: #660099;
 $color_border: #eee;
 $color_sub_base: #555;
 $font_text: 'Quicksand', sans-serif;
@@ -117,6 +118,19 @@ article.post {
             line-height: 1.7;
             font-size: 12px;
             .author { font-weight: 700; text-transform: capitalize; color: $color_primary; }
+            .category-badges {
+                margin-top: .5em;
+                a {
+                    background: $color_secondary;
+                    color: $color_base_inverted;
+                    border: 1px solid $color_base;
+                    padding: 2px 4px;
+                    font-weight: 600;
+                    letter-spacing: 0.3px;
+                    font-size: 12px;
+                    border-radius: 4px;
+                }
+            }
         }
         .entry-thumbnail-feature {
             img {
@@ -132,6 +146,16 @@ article.post {
         font-size: 12px;
         color: $color_sub_base;
         .author { font-weight: 700; text-transform: capitalize; color: $color_primary; }
+        .category-badges a {
+            background: $color_secondary;
+            color: $color_base_inverted;
+            border: 1px solid $color_base;
+            padding: 2px 4px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
     }
     .entry-thumbnail {
         margin-right: 1em;
