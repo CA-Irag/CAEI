@@ -95,9 +95,17 @@ body {
     }
 }
 
+/* Ad Section */
+.ad-section {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    bottom: 40px;
+}
+
 /* Content Area */
 .content-area {
-    padding: 1em 0 2em;
+    padding: 1em 0 calc(2em + 100px);
 }
 
 /* Post Article */

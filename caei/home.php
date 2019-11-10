@@ -41,5 +41,20 @@
             </div>
 		</main>
 	</section>
+    <section class="ad-section">
+        <div class="container">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Homepage Blog Lower Banner -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-7125640118978583"
+                data-ad-slot="6381643546"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </section>
 
 <?php get_footer();
